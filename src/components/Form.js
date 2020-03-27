@@ -1,7 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 function Form() {
-
+    const [formState, setFormState] = useState({
+        name: '',
+        size: '',
+        extraCheese: '',
+        bacon: '',
+        pepperoni: '',
+        supreme: '',
+        special: '',
+    })
+    
     return (
         <div>
             <form>
@@ -21,19 +30,19 @@ function Form() {
                 <div className='toppings'>
                     <p>toppings:</p>
                     <label htmlFor='checkBox'>
-                        <input type = 'checkbox'  />
+                        <input type = 'checkbox'  name='extraCheese'/>
                         Extra Cheese (+ $1.00)
                     </label>
                     <label htmlFor='checkBox'>
-                        <input type = 'checkbox' />
+                        <input type = 'checkbox' name ='bacon'/>
                         Bacon
                     </label>
                     <label htmlFor='checkBox'>
-                        <input type = 'checkbox' />
+                        <input type = 'checkbox' name = 'pepperoni'/>
                         Pepperoni 
                     </label>
                     <label htmlFor='checkBox'>
-                        <input type = 'checkbox' />
+                        <input type = 'checkbox' name= 'supreme'/>
                         Supreme
                     </label>
                 </div>
@@ -47,7 +56,7 @@ function Form() {
                 </div>
                 <div className='submit'>
                     <button>
-                        Submit
+                        Add to Order
                     </button>
                 </div>
             </form>
