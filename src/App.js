@@ -4,13 +4,20 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from './components/HomePage';
+import Form from './components/Form';
 
 const App = () => {
   return (
     <div className = "app">
-      
-       <Homepage exact Route = '/' />
-       <Form Route = '/pizza' />
+      <Navbar /> 
+      <Route exact path = '/'>
+        <HomePage />
+      </Route>
+      <Route path = '/pizza'>
+        <Form />
+      </Route>
      </div>
   );
 };
